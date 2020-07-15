@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    PHP
+                    NGINX <br>  PHP <br>  MySQL <br>
                 </div>
 
                 <div class="links">
