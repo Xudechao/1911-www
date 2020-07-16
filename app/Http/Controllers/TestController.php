@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use Illuminate\Support\Str;
 
 class TestController extends Controller
 {
@@ -53,6 +54,20 @@ class TestController extends Controller
         echo $data;
 
 
+    }
+
+    /**
+     *  生成token
+     */
+    public function getAccessToken()
+    {
+        $token = Str::random(32);
+
+        $data = [
+            'token' => $token,
+            'expire_in' => 7200
+        ];
+        echo json_encode($data);
     }
 
 }

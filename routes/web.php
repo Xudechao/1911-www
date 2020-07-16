@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/wx/token','TestController@getWxToken');
 Route::get('/wx/token2','TestController@getWxToken2');
 Route::get('/wx/token3','TestController@getWxToken3');
+
+
+Route::get('/api/token','TestController@getAccessToken');
