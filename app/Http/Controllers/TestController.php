@@ -77,7 +77,7 @@ class TestController extends Controller
 
     public function test2()
     {
-        $url = 'http://api.1911.com/test2';
+        $url = 'http://api.1911.com/test1';
         $response = file_get_contents($url);
         var_dump($response);
     }
