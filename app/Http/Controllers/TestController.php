@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Str;
 
 class TestController extends Controller
@@ -82,4 +83,20 @@ class TestController extends Controller
         var_dump($response);
     }
     //11
+
+    public function test()
+    {
+        $goods_info = [
+            'goods_id' => 123456,
+            'goods_name' => 'IPhonex',
+            'price' => 800000,
+            'add_time' => time()
+        ];
+
+        $key = 'goods_12345';
+
+        Redis::hmset($key,$goods_info);
+
+    }
+
 }

@@ -15,5 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/redis/hash1','TestController@hash1');
+
 Route::get('/user/info','TestController@userInfo');
 Route::get('test2','TestController@test2');
