@@ -82,7 +82,6 @@ class TestController extends Controller
         $response = file_get_contents($url);
         var_dump($response);
     }
-    //11
 
     public function test()
     {
@@ -99,6 +98,70 @@ class TestController extends Controller
 
     }
 
-    
+    /**
+     * 对称加密
+     * @param Request $request
+     */
+    public function aes1(Request $request)
+    {
+        $url = 'http://api.1911.com/test/dec';
+        $data = 'hello PHP';
+        //$data = '先擦鼻涕后提裤，从此走上社会路。';
+
+        $mehod = 'AES-256-CBC';
+        $keye = '1911www';
+        $lv = '1233211233211231';
+        $option = OPENSSL_RAW_DATA;
+
+        $enc = openssl_encrypt($data,$mehod,$keye,$option,$lv);
+         //echo "密文：".$enc;echo '</br>';
+        $b64_str = base64_encode($enc);
+         //echo "base64:".$b64_str;echo '</br>';
+
+        $api = $url.'?data='.urlencode($b64_str);
+        $response = file_get_contents($api);
+
+        var_dump($response);
+    }
+
+    /**
+     * 非对称加密
+     */
+    public function rsa(){
+        $data = "先擦鼻涕后提裤，从此走上社会路。";
+        echo "原密:".$data."<br>"."<hr>";
+        $content = openssl_get_privatekey(file_get_contents(storage_path("keys/www_priv.key")));
+
+        $priv_key = openssl_get_privatekey($content);
+        openssl_private_encrypt($data,$enc_data,$priv_key);
+        echo "加密:".$enc_data."<br>"."<hr>";
+        $enc_data = [
+            "data"=>  $enc_data,
+        ];
+        $url="http://api.1911.com/test/dersa";
+        $ch=curl_init();
+        //设置参数
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_POST,1);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $enc_data);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        //发送请求
+        $response=curl_exec($ch);
+        echo $response;
+        //提示错误
+        $errno=curl_errno($ch);
+        if($errno){
+            $errmsg=curl_error($ch);
+            var_dump($errmsg);
+        }
+        curl_close($ch);
+        ####################################################################
+        $one_pub_key = file_get_contents(storage_path("keys/api_pub.key"));
+        openssl_public_decrypt($response,$dec_data,$one_pub_key);
+        echo "<br>";
+        echo "<hr>";
+        echo $dec_data;
+
+    }
 
 }
