@@ -187,7 +187,7 @@ class TestController extends Controller
     public function header1()
     {
         $url = 'http://api.1911.com/test1';
-        $uid = 111111;
+        $uid = 666666;
         $token = Str::random(16);
         //header 传参
         $header = [
