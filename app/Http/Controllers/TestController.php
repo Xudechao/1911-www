@@ -164,4 +164,21 @@ class TestController extends Controller
 
     }
 
+    /**
+     * 签名测试
+     */
+    public function sign1()
+    {
+        $data = "hello PHP how";
+        $key = "1911www";
+
+        $sing_s1 = md5($data . $key);
+
+        //发送数据
+        $url = 'http://api.1911.com/test/sign1?data='.$data.'&sign='.$sing_s1;
+        $response = file_get_contents($url);
+        echo $response;
+
+    }
+
 }

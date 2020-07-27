@@ -24,3 +24,5 @@ Route::get('test2','TestController@test2');
 Route::get('/test/aes1','TestController@aes1');
 Route::get('/test/des1','TestController@des1');
 Route::get('/test/rsa','TestController@rsa');
+
+Route::get('/test/sign1','TestController@sign1');
