@@ -165,7 +165,7 @@ class TestController extends Controller
     }
 
     /**
-     * 签名测试
+     * 签名测试1
      */
     public function sign1()
     {
@@ -181,4 +181,25 @@ class TestController extends Controller
 
     }
 
+    /**
+     * 传参
+     */
+    public function header1()
+    {
+        $url = 'http://api.1911.com/test1';
+        $uid = 111111;
+        $token = Str::random(16);
+        //header 传参
+        $header = [
+            'uid:'.$uid,
+            'token:'.$token,
+        ];
+        //curl
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_HTTPHEADER,$header);
+        curl_exec($ch);
+        curl_close($ch);
+
+    }
 }

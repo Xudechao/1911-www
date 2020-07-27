@@ -26,3 +26,4 @@ Route::get('/test/des1','TestController@des1');
 Route::get('/test/rsa','TestController@rsa');
 
 Route::get('/test/sign1','TestController@sign1');
+Route::get('/header1','TestController@header1');
