@@ -27,3 +27,10 @@ Route::get('/test/rsa','TestController@rsa');
 
 Route::get('/test/sign1','TestController@sign1');
 Route::get('/header1','TestController@header1');
+
+Route::get('/test/pay','TestController@testPay');
+Route::get('/pay','TestController@pay');
+
+Route::get('/user/login','Index\IndexController@login');    //登录
+Route::get('/user/reg','Index\IndexController@reg');    //注册
+
