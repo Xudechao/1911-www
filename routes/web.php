@@ -16,21 +16,20 @@ Route::get('/', function () {
 });
 
 Route::get('/redis/hash1','TestController@hash1');
-
+#**************************************************************
 Route::get('/user/info','TestController@userInfo');
 Route::get('test2','TestController@test2');
-
-
+#**************************************************************
 Route::get('/test/aes1','TestController@aes1');
 Route::get('/test/des1','TestController@des1');
 Route::get('/test/rsa','TestController@rsa');
-
+#**************************************************************
 Route::get('/test/sign1','TestController@sign1');
 Route::get('/header1','TestController@header1');
-
+#**************************************************************
 Route::get('/test/pay','TestController@testPay');
 Route::get('/pay','TestController@pay');
-
-Route::get('/user/login','Index\IndexController@login');    //登录
-Route::get('/user/reg','Index\IndexController@reg');    //注册
-
+#**************************************************************
+Route::get("/user/login","Index\LoginController@login");  //登陆
+Route::get("/user/reg","Index\LoginController@reg"); //注册
+Route::get("/user/center","Index\LoginController@center");  //个人中心

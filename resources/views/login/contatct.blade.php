@@ -1,6 +1,7 @@
 @extends('lyouts.all')
-@section('title',"注册")
+@section('title',"大约")
 @section('content')
+    <!-- cart menu -->
     <!-- cart menu -->
     <div class="menus" id="animatedModal">
         <div class="close-animatedModal close-icon">
@@ -114,32 +115,22 @@
     <!-- end cart menu -->
 
 
-    <!-- register -->
+    <!-- about us -->
     <div class="pages section">
         <div class="container">
             <div class="pages-head">
-                <h3>REGISTER</h3>
+                <h3>ABOUT US</h3>
             </div>
-            <div class="register">
-                <div class="row">
-                    <form class="col s12" method="post" action="http://api.1911.com/user/reg">
-                        <div class="input-field">
-                            <input type="text" name="username" class="validate" placeholder="NAME" required>
-                        </div>
-                        <div class="input-field">
-                            <input type="email"name="email" placeholder="EMAIL" class="validate" required>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" name="password" placeholder="PASSWORD" class="validate" required>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" name="repassword" placeholder="PASSWORD" class="validate" required>
-                        </div>
-                        <button class="btn button-default">REGISTER</button>
-                    </form>
-                </div>
+            <div class="about-us">
+                <img src="img/about.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequuntur praesentium dignissimos voluptatum esse, perspiciatis mollitia repellendus rerum magni aspernatur ipsam maxime dolorem iure laudantium at veritatis doloribus, numquam, dicta?</p>
             </div>
         </div>
     </div>
-    <!-- end register -->
+    <!-- end about us -->
+
+
+    <!-- loader -->
+    <div id="fakeLoader"></div>
+    <!-- end loader -->
 @endsection

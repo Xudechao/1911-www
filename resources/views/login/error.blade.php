@@ -1,5 +1,5 @@
 @extends('lyouts.all')
-@section('title',"注册")
+@section('title',"404")
 @section('content')
     <!-- cart menu -->
     <div class="menus" id="animatedModal">
@@ -113,33 +113,17 @@
     </div>
     <!-- end cart menu -->
 
-
-    <!-- register -->
+    <!-- error 404 -->
     <div class="pages section">
         <div class="container">
-            <div class="pages-head">
-                <h3>REGISTER</h3>
-            </div>
-            <div class="register">
-                <div class="row">
-                    <form class="col s12" method="post" action="http://api.1911.com/user/reg">
-                        <div class="input-field">
-                            <input type="text" name="username" class="validate" placeholder="NAME" required>
-                        </div>
-                        <div class="input-field">
-                            <input type="email"name="email" placeholder="EMAIL" class="validate" required>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" name="password" placeholder="PASSWORD" class="validate" required>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" name="repassword" placeholder="PASSWORD" class="validate" required>
-                        </div>
-                        <button class="btn button-default">REGISTER</button>
-                    </form>
-                </div>
+            <div class="error404">
+                <h4>404</h4>
+                <h5>PAGE NOT FOUND</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quis temporibus, illum alias deserunt enim velit odit, soluta assumenda voluptatibus? Totam nam excepturi praesentium, soluta nisi id consectetur sapiente laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eos praesentium doloribus, odio cupiditate facilis, necessitatibus ab error, officiis quas ea exercitationem distinctio, nostrum ratione laboriosam. Architecto ratione explicabo, perferendis?</p>
             </div>
         </div>
     </div>
-    <!-- end register -->
+    <!-- end error 404 -->
 @endsection
+© 2020 GitHub, Inc.

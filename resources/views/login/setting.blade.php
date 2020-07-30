@@ -1,5 +1,5 @@
 @extends('lyouts.all')
-@section('title',"注册")
+@section('title',"设置")
 @section('content')
     <!-- cart menu -->
     <div class="menus" id="animatedModal">
@@ -113,33 +113,40 @@
     </div>
     <!-- end cart menu -->
 
-
     <!-- register -->
     <div class="pages section">
         <div class="container">
             <div class="pages-head">
-                <h3>REGISTER</h3>
+                <h3>SETTINGS</h3>
             </div>
             <div class="register">
                 <div class="row">
-                    <form class="col s12" method="post" action="http://api.1911.com/user/reg">
+                    <form class="col s12">
                         <div class="input-field">
-                            <input type="text" name="username" class="validate" placeholder="NAME" required>
+                            <input type="text" class="validate" placeholder="First Name" required>
                         </div>
                         <div class="input-field">
-                            <input type="email"name="email" placeholder="EMAIL" class="validate" required>
+                            <input type="text" class="validate" placeholder="Last Name" required>
                         </div>
                         <div class="input-field">
-                            <input type="password" name="password" placeholder="PASSWORD" class="validate" required>
+                            <input type="text" class="validate" placeholder="Username" required>
                         </div>
                         <div class="input-field">
-                            <input type="password" name="repassword" placeholder="PASSWORD" class="validate" required>
+                            <input type="email" placeholder="Email" class="validate" required>
                         </div>
-                        <button class="btn button-default">REGISTER</button>
+                        <div class="input-field">
+                            <input type="password" placeholder="Password" class="validate" required>
+                        </div>
+                        <div class="btn button-default">SAVE CANGES</div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- end register -->
+    <!-- loader -->
+    <div id="fakeLoader"></div>
+    <!-- end loader -->
+
 @endsection
+© 2020 GitHub, Inc.
