@@ -2,7 +2,7 @@
 <html lang="zxx">
 <head>
     <meta charset="UTF-8">
-    <title>--@yield('title')--</title>
+    <title>Mstore - Online Shop Mobile Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -44,11 +44,11 @@
             <img src="/admin/img/profile.jpg" alt="">
             <h2>John Doe</h2>
         </li>
-        <li><a href="{{url('/setting')}}"><i class="fa fa-cog"></i>Settings</a></li>
-        <li><a href="{{url('/about')}}"><i class="fa fa-user"></i>About Us</a></li>
-        <li><a href="{{url('/contact')}}"><i class="fa fa-envelope-o"></i>Contact Us</a></li>
-        <li><a href="{{url('/log')}}"><i class="fa fa-sign-in"></i>Login</a></li>
-        <li><a href="{{url('/reg')}}"><i class="fa fa-user-plus"></i>Register</a></li>
+        <li><a href="setting.html"><i class="fa fa-cog"></i>Settings</a></li>
+        <li><a href="about-us.html"><i class="fa fa-user"></i>About Us</a></li>
+        <li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>
+        <li><a href="login.html"><i class="fa fa-sign-in"></i>Login</a></li>
+        <li><a href="register.html"><i class="fa fa-user-plus"></i>Register</a></li>
     </ul>
 </div>
 <!-- end side nav right-->
@@ -171,7 +171,7 @@
                     </a>
                 </div>
                 <div class="col s4">
-                    <a href="{{url('/error')}}" class="button-link">
+                    <a href="error404.html" class="button-link">
                         <div class="menu-link">
                             <div class="icon">
                                 <i class="fa fa-hourglass-half"></i>
@@ -193,7 +193,7 @@
                     </a>
                 </div>
                 <div class="col s4">
-                    <a href="{{url('/about')}}" class="button-link">
+                    <a href="about-us.html" class="button-link">
                         <div class="menu-link">
                             <div class="icon">
                                 <i class="fa fa-user"></i>
@@ -203,7 +203,7 @@
                     </a>
                 </div>
                 <div class="col s4">
-                    <a href="{{url("/contact")}}" class="button-link">
+                    <a href="contact.html" class="button-link">
                         <div class="menu-link">
                             <div class="icon">
                                 <i class="fa fa-envelope-o"></i>
@@ -215,7 +215,7 @@
             </div>
             <div class="row">
                 <div class="col s4">
-                    <a href="{{url('/setting')}}" class="button-link">
+                    <a href="setting.html" class="button-link">
                         <div class="menu-link">
                             <div class="icon">
                                 <i class="fa fa-cog"></i>
@@ -225,7 +225,7 @@
                     </a>
                 </div>
                 <div class="col s4">
-                    <a href="{{url("/log")}}" class="button-link">
+                    <a href="login.html" class="button-link">
                         <div class="menu-link">
                             <div class="icon">
                                 <i class="fa fa-sign-in"></i>
@@ -235,7 +235,7 @@
                     </a>
                 </div>
                 <div class="col s4">
-                    <a href="{{url("/reg")}}" class="button-link">
+                    <a href="register.html" class="button-link">
                         <div class="menu-link">
                             <div class="icon">
                                 <i class="fa fa-user-plus"></i>
@@ -249,7 +249,176 @@
     </div>
 </div>
 <!-- end menu -->
-@yield('content')
+
+<!-- cart menu -->
+<div class="menus" id="animatedModal">
+    <div class="close-animatedModal close-icon">
+        <i class="fa fa-close"></i>
+    </div>
+    <div class="modal-content">
+        <div class="cart-menu">
+            <div class="container">
+                <div class="content">
+                    <div class="cart-1">
+                        <div class="row">
+                            <div class="col s5">
+                                <img src="/admin/img/cart-menu1.png" alt="">
+                            </div>
+                            <div class="col s7">
+                                <h5><a href="">Fashion Men's</a></h5>
+                            </div>
+                        </div>
+                        <div class="row quantity">
+                            <div class="col s5">
+                                <h5>Quantity</h5>
+                            </div>
+                            <div class="col s7">
+                                <input value="1" type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s5">
+                                <h5>Price</h5>
+                            </div>
+                            <div class="col s7">
+                                <h5>$20</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s5">
+                                <h5>Action</h5>
+                            </div>
+                            <div class="col s7">
+                                <div class="action"><i class="fa fa-trash"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="cart-2">
+                        <div class="row">
+                            <div class="col s5">
+                                <img src="/admin/img/cart-menu2.png" alt="">
+                            </div>
+                            <div class="col s7">
+                                <h5><a href="">Fashion Men's</a></h5>
+                            </div>
+                        </div>
+                        <div class="row quantity">
+                            <div class="col s5">
+                                <h5>Quantity</h5>
+                            </div>
+                            <div class="col s7">
+                                <input value="1" type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s5">
+                                <h5>Price</h5>
+                            </div>
+                            <div class="col s7">
+                                <h5>$20</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s5">
+                                <h5>Action</h5>
+                            </div>
+                            <div class="col s7">
+                                <div class="action"><i class="fa fa-trash"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="total">
+                    <div class="row">
+                        <div class="col s7">
+                            <h5>Fashion Men's</h5>
+                        </div>
+                        <div class="col s5">
+                            <h5>$21.00</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s7">
+                            <h5>Fashion Men's</h5>
+                        </div>
+                        <div class="col s5">
+                            <h5>$21.00</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s7">
+                            <h6>Total</h6>
+                        </div>
+                        <div class="col s5">
+                            <h6>$41.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn button-default">Process to Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end cart menu -->
+
+<!-- shop single -->
+<div class="pages section">
+    <div class="container">
+        @foreach($a as $k => $v)
+            <div class="shop-single">
+                <img src="/admin/img/shop-single.png" alt="">
+                <h5>{{$v->goods_name}}</h5>
+                <div class="price"> <span>$28</span></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eaque in non delectus, error iste veniam commodi mollitia, officia possimus, repellendus maiores doloribus provident. Itaque, ab perferendis nemo tempore! Accusamus</p>
+                <button type="button" class="btn button-default">ADD TO CART</button>
+            </div>
+        @endforeach
+        <div class="review">
+            <h5>1 reviews</h5>
+            <div class="review-details">
+                <div class="row">
+                    <div class="col s3">
+                        <img src="/admin/img/user-comment.jpg" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s9">
+                        <div class="review-title">
+                            <span><strong>John Doe</strong> | Juni 5, 2016 at 9:24 am | <a href="">Reply</a></span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis accusantium corrupti asperiores et praesentium dolore.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review-form">
+            <div class="review-head">
+                <h5>Post Review in Below</h5>
+                <p>Lorem ipsum dolor sit amet consectetur*</p>
+            </div>
+            <div class="row">
+                <form class="col s12 form-details">
+                    <div class="input-field">
+                        <input type="text" required class="validate" placeholder="NAME">
+                    </div>
+                    <div class="input-field">
+                        <input type="email" class="validate" placeholder="EMAIL" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" class="validate" placeholder="SUBJECT" required>
+                    </div>
+                    <div class="input-field">
+                        <textarea name="textarea-message" id="textarea1" cols="30" rows="10" class="materialize-textarea" class="validate" placeholder="YOUR REVIEW"></textarea>
+                    </div>
+                    <div class="form-button">
+                        <div class="btn button-default">POST REVIEW</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end shop single -->
+
 <!-- loader -->
 <div id="fakeLoader"></div>
 <!-- end loader -->
@@ -274,6 +443,7 @@
     </div>
 </div>
 <!-- end footer -->
+
 <!-- scripts -->
 <script src="/admin/js/jquery.min.js"></script>
 <script src="/admin/js/materialize.min.js"></script>

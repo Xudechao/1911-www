@@ -11,8 +11,9 @@ class LoginController extends Controller
      * 登录
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function login(){
-        if(request()->isMethod("get")){
+    public function login()
+    {
+        if (request()->isMethod("get")) {
             return view("login.login");
         }
 
@@ -22,15 +23,11 @@ class LoginController extends Controller
      * 注册
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function reg(){
-        if(request()->isMethod("get")){
+    public function reg()
+    {
+        if (request()->isMethod("get")) {
             return view("login.reg");
         }
 
-    }
-
-    public function center()
-    {
-        echo 111111;
     }
 }
