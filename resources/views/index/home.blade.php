@@ -230,48 +230,48 @@
     </div>
     <!-- end product -->
 
-{{--    <!-- promo -->--}}
-{{--    <div class="promo section">--}}
-{{--        <div class="container">--}}
-{{--            <div class="content">--}}
-{{--                <h4>PRODUCT BUNDLE</h4>--}}
-{{--                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>--}}
-{{--                <button class="btn button-default">SHOP NOW</button>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <!-- end promo -->--}}
+    <!-- promo -->
+    <div class="promo section">
+        <div class="container">
+            <div class="content">
+                <h4>PRODUCT BUNDLE</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                <button class="btn button-default">SHOP NOW</button>
+            </div>
+        </div>
+    </div>
+    <!-- end promo -->
 
-{{--    <!-- product -->--}}
-{{--    <div class="section product">--}}
-{{--        <div class="container">--}}
-{{--            <div class="section-head">--}}
-{{--                <h4>TOP PRODUCT</h4>--}}
-{{--                <div class="divider-top"></div>--}}
-{{--                <div class="divider-bottom"></div>--}}
-{{--            </div>--}}
-{{--            <div class="row">--}}
-{{--                @foreach($g as $v)--}}
-{{--                    <div class="col s6">--}}
-{{--                        <div class="content">--}}
-{{--                            <img src="{{env("UPLOADS_URL")}}{{$v->goods_img}}" >--}}
-{{--                            <h6><a href="{{url('/user/desc/'.$v->goods_id)}}">{{$v->goods_name}}</a></h6>--}}
-{{--                            <div class="price">--}}
-{{--                                ${{$v->shop_price*0.8}} <span>${{$v->shop_price}}</span>--}}
-{{--                            </div>--}}
-{{--                            <a href="{{url('http://api.1911.com/goshop/'.$v->goods_id)}}" class="btn button-default">加入购物车</a>--}}
-{{--                        </div>--}}
-{{--                        <br>--}}
-{{--                    </div>--}}
+    <!-- product -->
+    <div class="section product">
+        <div class="container">
+            <div class="section-head">
+                <h4>TOP PRODUCT</h4>
+                <div class="divider-top"></div>
+                <div class="divider-bottom"></div>
+            </div>
+            <div class="row">
+                @foreach($g as $v)
+                    <div class="col s6">
+                        <div class="content">
+                            <img src="{{env("UPLOADS_URL")}}{{$v->goods_img}}" >
+                            <h6><a href="{{url('/user/desc/'.$v->goods_id)}}">{{$v->goods_name}}</a></h6>
+                            <div class="price">
+                                ${{$v->shop_price*0.8}} <span>${{$v->shop_price}}</span>
+                            </div>
+                            <a href="{{url('http://api.1911.com/user/goshop/'.$v->goods_id)}}" class="btn button-default">加入购物车</a>
+                        </div>
+                        <br>
+                    </div>
 
-{{--                @endforeach--}}
-{{--            </div>--}}
+                @endforeach
+            </div>
 
 
 
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <!-- end product -->--}}
+        </div>
+    </div>
+    <!-- end product -->
 
     <!-- loader -->
     <div id="fakeLoader"></div>

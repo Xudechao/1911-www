@@ -172,7 +172,7 @@
                     </div>
                 @endforeach
             </div>
-            <a class="btn button-default">确认结算</a>
+            <a href="{{url('http://www.1911.com/test/pay')}}" class="btn button-default">确认结算</a>
         </div>
     </div>
     <!-- end cart -->
