@@ -1,4 +1,3 @@
-
 @extends('lyouts.all')
 @section('title',"首页")
 @section('content')
@@ -14,7 +13,7 @@
                         <div class="cart-1">
                             <div class="row">
                                 <div class="col s5">
-                                    <img src="/static/img/cart-menu1.png" alt="">
+                                    <img src="/admin/img/cart-menu1.png" alt="">
                                 </div>
                                 <div class="col s7">
                                     <h5><a href="">Fashion Men's</a></h5>
@@ -49,7 +48,7 @@
                         <div class="cart-2">
                             <div class="row">
                                 <div class="col s5">
-                                    <img src="/static/img/cart-menu2.png" alt="">
+                                    <img src="/admin/img/cart-menu2.png" alt="">
                                 </div>
                                 <div class="col s7">
                                     <h5><a href="">Fashion Men's</a></h5>
@@ -119,7 +118,7 @@
 
         <ul class="slides">
             <li>
-                <img src="/static/img/slide1.jpg" alt="">
+                <img src="/admin/img/slide1.jpg" alt="">
                 <div class="caption slider-content  center-align">
                     <h2>WELCOME TO MSTORE</h2>
                     <h4>Lorem ipsum dolor sit amet.</h4>
@@ -127,7 +126,7 @@
                 </div>
             </li>
             <li>
-                <img src="/static/img/slide2.jpg" alt="">
+                <img src="/admin/img/slide2.jpg" alt="">
                 <div class="caption slider-content center-align">
                     <h2>JACKETS BUSINESS</h2>
                     <h4>Lorem ipsum dolor sit amet.</h4>
@@ -135,7 +134,7 @@
                 </div>
             </li>
             <li>
-                <img src="/static/img/slide3.jpg" alt="">
+                <img src="/admin/img/slide3.jpg" alt="">
                 <div class="caption slider-content center-align">
                     <h2>FASHION SHOP</h2>
                     <h4>Lorem ipsum dolor sit amet.</h4>
@@ -220,7 +219,7 @@
                             <div class="price">
                                 ${{$v->shop_price*0.8}} <span>${{$v->shop_price}}</span>
                             </div>
-                            <a href="{{url('http://api.1911.com/goshop/'.$v->goods_id)}}" class="btn button-default">加入购物车</a>
+                            <a href="{{url('http://www.1911.com/user/goshop/'.$v->goods_id)}}" class="btn button-default">加入购物车</a>
                         </div>
                         <br>
                     </div>

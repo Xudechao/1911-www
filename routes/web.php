@@ -34,3 +34,6 @@ Route::get("/user/login","Index\LoginController@login");  //登陆
 Route::get("/user/reg","Index\LoginController@reg"); //注册
 Route::get('/user/index','Index\IndexController@index');    //首页
 Route::get('/user/desc/{goods_id}','Index\IndexController@desc'); //详情页
+Route::get("/user/goshop/{goods_id}","Index\CarController@goshop");
+Route::get("/user/car","Index\CarController@car"); //加入购物车
+

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Index;
 use App\Http\Controllers\Controller;
 use App\Model\GoodsModel;
 use Illuminate\Http\Request;
-use App\Model\CarModel;
 
 class IndexController extends Controller
 {
@@ -43,4 +42,6 @@ class IndexController extends Controller
         return view('index.add',['a'=>$a]);
 
     }
+
+
 }
