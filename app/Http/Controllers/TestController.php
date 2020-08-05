@@ -212,7 +212,6 @@ class TestController extends Controller
         return view('test.goods');
     }
 
-
     /**
      * 跳转支付宝支付
      */
@@ -268,7 +267,6 @@ class TestController extends Controller
         return redirect($url);
 //        echo $url;die;
     }
-
 
     protected function sign($data)
     {
