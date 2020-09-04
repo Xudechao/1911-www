@@ -105,8 +105,8 @@ class TestController extends Controller
     public function aes1(Request $request)
     {
         $url = 'http://api.1911.com/test/dec';
-        $data = 'hello PHP';
-        //$data = '先擦鼻涕后提裤，从此走上社会路。';
+        //$data = 'hello PHP';
+        $data = '先擦鼻涕后提裤，从此走上社会路。';
 
         $mehod = 'AES-256-CBC';
         $keye = '1911www';

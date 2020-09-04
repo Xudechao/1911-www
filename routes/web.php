@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/reg/reg','Index\TestController@reg'); //注册
+Route::post('/reg/login','Index\TestController@login'); //登录
+Route::post('/reg/goods','Index\TestController@goods'); //商品
+
+#*************************************************************
 Route::get('/redis/hash1','TestController@hash1');
 #**************************************************************
 Route::get('/user/info','TestController@userInfo');
